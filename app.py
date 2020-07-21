@@ -9,4 +9,7 @@ def load_data():
   data= pd.read_csv(url)
   return data
 data= load_data()   
-st.write(data.head())
+st.write(data)
+st.sidebar.subheader("Isso  um subheader")
+random_tweet = st.sidebar.radio('Sentiment',('positive','neutral','negative'))
+st.sidebar.markdown(data.query('Bairro'))
