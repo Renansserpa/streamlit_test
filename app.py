@@ -15,9 +15,9 @@ st.write(data)
 st.sidebar.subheader("Isso  um subheader")
 random_tweet = st.sidebar.radio('Sentiment',('Fazenda Penedo','Jambeiro','Maringá'))
 st.sidebar.markdown(data.query('Bairro==@random_tweet')['Bairro'].sample(n=1).values[0])
-select=st.sidebar.selectbox('tipo de visualizaÃÂ§ÃÂ£o',('Histogram','Pie chart'),key='1')
+select=st.sidebar.selectbox('tipo de visualização',('Histogram','Pie chart'),key='1')
 if not st.sidebar.checkbox('Hide',True):
-    st.markdown('ta acontecendo')
+    st.markdown('ta acontecendo:')
     if select == 'Histogram':
         fig= px.bar({'Sentiment':['positive','neutral','negative'],'Tweets':[
         20,30,40
