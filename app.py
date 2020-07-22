@@ -11,5 +11,5 @@ def load_data():
 data= load_data()   
 st.write(data)
 st.sidebar.subheader("Isso  um subheader")
-random_tweet = st.sidebar.radio('Sentiment',('positive','neutral','negative'))
+random_tweet = st.sidebar.radio('Sentiment',('Fazenda Penedo','Jambeiro','Maringá'))
 st.sidebar.markdown(data.query('Bairro==@random_tweet')['Bairro'].sample(n=1))
