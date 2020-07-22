@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 st.title("Plotly examples")
+st.markdown("Um markdown, pequenino")
 st.sidebar.title('Aqui temos um título provavelmente maneiro')
 url= 'coord-ita.csv'
 @st.cache(persist=True)
