@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import plotly.express as px
 st.title("Plotly examples")
 st.markdown("Um markdown, pequenino")
 st.sidebar.title('Aqui temos um título provavelmente maneiro')
@@ -21,4 +22,8 @@ if not st.sidebar.checkbox('Hide',True):
         fig= px.bar({'Sentiment':['positive','neutral','negative'],'Tweets':[
         20,30,40
         ]},x='Sentiment',y='Tweets',color='Tweets',height=500)
+        st.plotly_chart(fig)
+    else:
+        fig=px.pie({'Sentiment':['positive','neutral','negative'],'Tweets':[
+        20,30,40]},values='Tweets',names='Sentiment')
         st.plotly_chart(fig)
